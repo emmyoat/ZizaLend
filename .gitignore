@@ -5,7 +5,6 @@ contracts/target/
 contracts/**/test_snapshots/
 contracts/cobertura.xml
 dist
-.env
 .next
 .cargo-home/
 .cargo-target/
@@ -30,3 +29,4 @@ packages/types/src/generated.ts
 # reproduced by `node build.mjs`, and the audio additionally needs a network round trip.
 scripts/video/audio/
 scripts/video/build/
+config.bat
