@@ -6,17 +6,18 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
     "analyze": "ANALYZE=true next build",
     "check:bundle-size": "node scripts/check-bundle-size.mjs",
-    "start": "next start",
+    "start": "node init && next start",
     "lint": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "i18n:check": "node scripts/check-i18n.mjs",
     "audit:a11y": "next build && npx axe-playwright",
     "format": "prettier --write .",
     "test": "jest",
+    "test:coverage": "jest --coverage && node ../scripts/check-coverage-thresholds.mjs --project frontend",
     "test:watch": "jest --watch",
     "test:e2e": "playwright test",
     "prepare": "husky"
